@@ -15,4 +15,5 @@
 <%= image_tag @painting.image_url(:thumb) %><br>
 
 <%= link_to 'Edit', edit_painting_path(@painting) %> |
+<td><%= link_to 'Destroy', @painting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 <%= link_to 'Back', paintings_path %>
