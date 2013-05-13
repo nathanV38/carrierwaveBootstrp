@@ -44,8 +44,12 @@ class PaintingsController < ApplicationController
 
     respond_to do |format|
       if @painting.save
-        format.html { redirect_to @painting, notice: 'Painting was successfully created.' }
-        format.json { render json: @painting, status: :created, location: @painting }
+		if params[:painting][:image].present?
+			format.html {render :crop}
+		else
+			format.html { redirect_to @painting, notice: 'Painting was successfully created.' }
+			format.json { render json: @painting, status: :created, location: @painting }
+		end
       else
         format.html { render action: "new" }
         format.json { render json: @painting.errors, status: :unprocessable_entity }
@@ -60,8 +64,12 @@ class PaintingsController < ApplicationController
 
     respond_to do |format|
       if @painting.update_attributes(params[:painting])
-        format.html { redirect_to @painting, notice: 'Painting was successfully updated.' }
-        format.json { head :no_content }
+		if params[:painting][:image].present?
+			format.html {render :crop}
+		else
+			format.html { redirect_to @painting, notice: 'Painting was successfully updated.' }
+			format.json { head :no_content }
+		end
       else
         format.html { render action: "edit" }
         format.json { render json: @painting.errors, status: :unprocessable_entity }

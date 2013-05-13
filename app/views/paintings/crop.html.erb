@@ -1,0 +1,11 @@
+<h1>crop image_avatar</h1>
+<%= image_tag @painting.image_url(:large), id: "cropbox" %>
+
+<%= form_for @painting do |f| %>
+	<% %w[x y w h].each do |attribute| %>
+		<%= f.text_field "crop_#{attribute}" %> </br>
+	<% end %>
+	<div class="actions">
+		<%= f.submit "Crop" %>
+	</div>
+<% end %>

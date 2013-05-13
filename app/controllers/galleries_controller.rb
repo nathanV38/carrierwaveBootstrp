@@ -44,8 +44,8 @@ class GalleriesController < ApplicationController
 
     respond_to do |format|
       if @gallery.save
-        format.html { redirect_to @gallery, notice: 'Gallery was successfully created.' }
-        format.json { render json: @gallery, status: :created, location: @gallery }
+		format.html { redirect_to @gallery, notice: 'Gallery was successfully created.' }
+		format.json { render json: @gallery, status: :created, location: @gallery }
       else
         format.html { render action: "new" }
         format.json { render json: @gallery.errors, status: :unprocessable_entity }
@@ -60,8 +60,8 @@ class GalleriesController < ApplicationController
 
     respond_to do |format|
       if @gallery.update_attributes(params[:gallery])
-        format.html { redirect_to @gallery, notice: 'Gallery was successfully updated.' }
-        format.json { head :no_content }
+		format.html { redirect_to @gallery, notice: 'Gallery was successfully updated.' }
+		format.json { head :no_content }
       else
         format.html { render action: "edit" }
         format.json { render json: @gallery.errors, status: :unprocessable_entity }
