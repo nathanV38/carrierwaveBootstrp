@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.Jcrop
+//= require bootstrap
 //= require_tree .

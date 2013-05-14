@@ -12,7 +12,7 @@
 
 
 <p>image thumb</p>
-<%= image_tag @painting.image_url(:thumb) %><br>
+<%= image_tag @painting.image_url(:large) %><br>
 
 <%= link_to 'Edit', edit_painting_path(@painting) %> |
 <td><%= link_to 'Destroy', @painting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
