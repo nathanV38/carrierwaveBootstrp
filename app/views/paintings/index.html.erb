@@ -14,7 +14,7 @@
   <ul class="thumbnails">
 	<% @paintings.each do |painting| %>
 		<li class="span3">
-			<%= link_to image_tag(painting.image_url(:thumb)), painting, {:style => 'height:180px;width:100px;', :class => "thumbnail"} %><br>	
+			<%= link_to image_tag(painting.image_url(:thumb)), painting, {:style => 'height:180px;width:150px;', :class => "thumbnail"} %><br>	
 		</li>
 	<% end %>
   </ul>
