@@ -1,29 +1,39 @@
-<h1>Listing paintings</h1>
+<h4>ARTICLES</h4>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Gallery</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<br/>
 
-<div class="container">  
-<div class="row-fluid">
+
+
   <ul class="thumbnails">
 	<% @paintings.each do |painting| %>
-		<li class="span3">
-			<%= link_to image_tag(painting.image_url(:thumb)), painting, {:style => 'height:180px;width:150px;', :class => "thumbnail"} %><br>	
+		<li >
+			<!--<%= link_to image_tag(painting.image_url(:thumb)), painting, {:class => "thumbnail"}  %><br>	-->
+			
+			<div class="thumbnail" >
+				<%= link_to image_tag(painting.image_url(:thumb)), painting %>
+					<div class="text" >
+						<p><%= painting.name %></p>
+						<p><%= painting.gallery.name %></p>
+					</div>
+			</div>
 		</li>
+		
+		
+		
+		
+		
+		
+		
+			
+			
 	<% end %>
   </ul>
-</div>
-</div>	
+
+
   
 
 
 
-<br />
+
 
 <%= link_to 'New Painting', new_painting_path %>

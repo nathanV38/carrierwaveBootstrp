@@ -16,28 +16,167 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </a>
-        <a class="brand" href="#">Some Store</a>
+        <a class="brand" href="#">CoDressMe</a>
         <div class="nav-collapse">
-          <ul class="nav">
-            <li><%= link_to "Browse Products", paintings_path %></li>
-            <li><%= link_to "Price List" %></li>
-            <li><%= link_to "Contact Us" %></li>
-            <li><%= link_to "Cart" %></li>
+          <ul class="nav pull-right">
+            <li>
+				<form class="navbar-form">
+					<input type="text" class="input-small" placeholder="Email">
+					<input type="password" class="input-small" placeholder="Password">
+					  
+									
+					<button class="btn btn-primary" type="submit">
+							Connecte-toi
+						<%= link_to "", paintings_path %>
+					</button>
+				
+					<button class="btn btn-custom-spin" type="button">
+							Facebook-toi
+						<%= link_to "", paintings_path %>
+					</button>
+				</form>
+			</li>
           </ul>
         </div>
       </div>
     </div>
-  </div>
+</div>
+
+
+<div class="navbar nav">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="#">LOGO</a>
+        <div class="nav-collapse">
+          <ul class="nav ">
+            
+				<li><a href="#">CATALOGUE</a></li>
+				<li><a href="#">MEMBRES</a></li>
+				<li><a href="#">FORUM</a></li>
+				<li><a href="#">BLOGUE</a></li>
+					
+				
+			
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
 
   <div class="container">
+	<h1></h1>
+
+	<div class="row">
+		<div class="span9">
+			<div class="input-prepend input-append">
+				<div class="btn-group">
+					<button class="btn dropdown-toggle" data-toggle="dropdown">
+					Critères
+					<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li>Regions</li>
+						<li>Modeuses</li>
+						<li>Type de vetement</li>
+					</ul>
+					</div>
+				<input class="span4" id="appendedInputButtons" type="text" placeholder="Rechercher membre: par ex, Lola">
+				<button class="btn" type="button">Rechercher</button>
+				<button class="btn" type="button">Options</button>
+			</div>
+		</div
+		<div class="span3">
+			<button class="btn btn-large btn-custom-lighten span3" type="button">+ VENDS ET ECHANGE ICI</button>
+		</div
+	</div>
+  
+  
+  
+  
+	
+  
+  
     <div class="row">
       <div class="span9"><%= yield %></div>
       <div class="span3">
-        <h2>About Us</h2>
+	  <h4></br></h4>
+		<div class="hero-unit oli">
+			<h4>REJOINS-NOUS AUJOURD'HUI !</h4>
+			<h6 class="petittexte">Vends et échange les vêtements, chaussures & accessoires que tu veux renouveler, et puise dans notre catalogue pour redonner du style à ta garde-robe ! Rejoins aussi une communauté férue de mode (mais sans gaspillage) !</h6>
+			</br>
+			<p>
+				<a class="btn btn-primary ">
+					Créer un compte
+				</a>
+			</p>
+		</div>
+		
+        <h2>Nouveautés</h2>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      
+	  
+		  <h2>Coup de coeur	</h2>
+		  <div class="thumbnail span3" >
+					<%= link_to image_tag(Painting.first.image_url(:thumb)), "#" %>
+						<div class="text" >
+							<p><%= Painting.first.name %></p>
+							<p><%= Painting.first.gallery.name %></p>
+						</div>
+				</div>
+		  </div>
+		  
+	 </div>
+		  
+  </div>
+  
+  <h1></br></br></br></h1>
+  
+  
+</body>
+
+
+
+<footer>
+
+<div class="navbar navbar-bottom navbar-inverse">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="#">CoDressMe</a>
+        <div class="nav-collapse">
+          <ul class="nav ">
+            <li><a href="#">FACEBOOK</a></li>
+				<li><a href="#">TWITTER</a></li>
+				<li><a href="#">GOOGLE</a></li>
+				<li><a href="#">PINTEREST</a></li>
+		  </ul>
+		  
+        </div>
+		<div class="nav-collapse">
+          <ul class="nav ">
+            <li><a href="#">A propos de nous|</a></li>
+				<li><a href="#">Contact|</a></li>
+				<li><a href="#">Termes et conditions|</a></li>
+				<li><a href="#">Politique de confidentialité|</a></li>
+		  </ul>
+		  
+        </div>
       </div>
     </div>
-  </div>
+</div>
 
-</body>
+</footer>
 </html>
